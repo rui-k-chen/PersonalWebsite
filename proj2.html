@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	
+	<head>
+		<title>R Multi Regression Modeling</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Home (Back)</a>
+				<nav>
+					<ul>
+						<li><a href="generic.html">R Project</a></li>
+						<!--<li><a href="generic.html" class="active">Generic</a></li>-->
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Data Visualization with Python Dash</h1>
+							<span class="image fit"><img src="images/dashvector.svg" alt="" /></span>
+							<p>
+                                In this project we have choosen the dataset from 2016 called "2016 Global Ecological Footprint." This dataset contianed 188 enteries, of which each 188 enteries represented a different country. The goal of this project is to use the Dash Python library to help us visualize data and make it interactive. 
+                                We used libraries like pandas and dash for this project. We looked at factors like the human development index (HDI) and gross domestic product (GDP). The human development index according to the United Nations "Is a summary of average achievement in key dimensions of human development." It measures the life span, 
+                                education levels, and standard of livings. The highest HDI that any country can achieve is 1.00. GDP shows "The monetary value of all finished goods and services made within a country during a specific period." If we graph the GDP and HDI on a scattergraph we will get this:
+							</p>
+							<div style="display: flex; justify-content: center"><img src="images/graph1.png" alt="" /></div>
+							<br></br>
+							<p>From the graph we can inference  that there is a positive linear relationship between the countries' HDI and GDP. So typically if we see a higher GDP we can usually see a higher HDI as well. Specifically we can look at Luxembourg. Luxembourg's HDI is 0.89 which is fairly high. Consequently, Luxembourg also boasts the highest GDP on the list with 114.665l (in millions). 
+                                Look at the other end of the spectrum we can also look at Niger. Niger has a lower GDP of 410.91 (millions) and has a HDI of only 0.34. In both cases we have support of the case that there is a positive linear relationship between HDI and GDP. 
+                            </p>
+							<p>We then tie this into the ecological aspect of each country. Our common variable here is the countries. We look again to Luxembourg and see that while it has high HDI and GDP it is ecologically deficient. In fact it is the most ecologically deficient. A trend we tend to see is that 
+                                the more far right (ecologically deficient) the more developed they tend to be. we can support the trend that the more developed country is the more ecological deficient it is. Looking at Burundi we see that althought it is not as developed it is more eco-friendly.
+                            </p>
+							<div style="display: flex; justify-content: center"><img src="images/graph2.png" alt="" /></div>
+                            <br></br>
+                            <p>The next thing we did was look at the correlation matrix of each variable and see how they are related to each other. In order to visualize this we will use a heat map. First we did the correlation matrix in R using the cor() function. Of note we see that earth mass required has a very high correlation with 
+                                carbon footprint of 0.95 with the highest value being 1. Another correlation we see is between earth required and ecological footprint of 0.99.
+                            </p>
+							<div style="display: flex; justify-content: center"><img src="images/heatmap.png" alt="" /></div>
+							<br></br>
+							<p> The final graph we did to that summerizes all the data is a parallel graph. Here each strand is a country and display  throughout the graph is each individual variable. </p>
+							<div style="display: flex; justify-content: center"><img src="images/parallel.png" alt="" /></div>
+							<br></br>
+							
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

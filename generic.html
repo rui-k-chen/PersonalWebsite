@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	
+	<head>
+		<title>R Multi Regression Modeling</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Home (Back)</a>
+				<nav>
+					<ul>
+						<li><a href="proj2.html">Dash Project (Next)</a></li>
+						<!--<li><a href="generic.html" class="active">Generic</a></li>-->
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">R Multi Regression Modeling</h1>
+							<span class="image fit"><img src="images/Rlogo.svg" alt="" /></span>
+							<p>	For this project we were presented with a set of data that was similar to that of Caspi et al. This study was took into account 
+								The Caspi et al study was supported by that Risch et al for having correct calculations and results. The data that we were given contained
+								four environmental variables and twenty genetic variables. The was a psychological study about how depression affected the mdoeration of a certain gene.
+								We used multiple statistics packages some of whcih included: MASS, knitr, and leaps. 
+							</p>
+							<p>The first thing we did was found the linear regression model for the environmental variables: </p>
+							<div style="display: flex; justify-content: center"><img src="images/figure1.png" alt="" /></div>
+							<br></br>
+							<p>The purpose of finding the linear regression is to find the coefficient of determination which will help us determine which environmental variable was significant. For our dataset our, the coefficient of determination was 0.506 so we reject E1, E3, and E4. We accept E2.  </p>
+							<p> We then use the a trans residual plot which the transformation was decided by a box cox plot.</p>
+							<div style="display: flex; justify-content: center"><img src="images/transplot.png" alt="" /></div>
+							<br></br>
+							<div style="display: flex; justify-content: center"><img src="images/boxcox.png" alt="" /></div>
+							<br></br>
+							<p>We then used the leaps package to generate possible models: </p>
+							<div style="display: flex; justify-content: center"><img src="images/bayemodel.png" alt="" /></div>
+							<br></br>
+							<p>We then use the Bayesian Information Criterion and try to see between which two models does the BIC changes the least. From our generated model we can see that there is the least amount of change from model two to three, so we choose model two. Our final model for this data set is: </p>
+							<div style="display: flex; justify-content: center"><img src="images/final.png" alt="" /></div>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
